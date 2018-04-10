@@ -368,12 +368,12 @@ public class DataHandler {
                 //execution is here then the weekdays specified are not in the
                 //range of valid Gregorian Calendar Days. Return null here.
                 return null;
-            case Appt.RECUR_BY_MONTHLY:
+            case Appt.RECUR_BY_YEARLY:
                 //Just increment the month and return the day. Not sure what
                 //happens when the day is 31 and the next month has 30 days...
                 nextDay.add(nextDay.MONTH, 1);
                 return nextDay;
-            case Appt.RECUR_BY_YEARLY:
+            case Appt.RECUR_BY_MONTHLY:
                 //Just increment the year. The only possible problem is an 
                 //appointment that recurs on February 29.
                 nextDay.add(nextDay.YEAR, 1);
