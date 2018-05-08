@@ -4,7 +4,13 @@
 
 package calendar;
 
+
+
+
 import org.w3c.dom.Element;
+
+
+
 
 /**
  *  This class represents a single appointment that might be stored in
@@ -210,7 +216,7 @@ public class Appt{
         if (title == null) 
             this.title = "";
         else
-            this.title = title;
+            this.title += title;
     }
     
     /** Sets description */
@@ -368,7 +374,7 @@ public class Appt{
     public String toString()
     {
     	
-		if (!getValid()) {
+		if (getValid()) {
 		    System.err.println("\tThis appointment is not valid");
 		}
          String day= this.getStartMonth()+"/"+this.getStartDay()+"/"+this.getStartYear() + " at ";
